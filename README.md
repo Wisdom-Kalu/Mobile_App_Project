@@ -1,7 +1,7 @@
 # Mobile_App_Project
 For COVID-19 Tracking in Nigeria
 
-# Covid-19 guide Mobile App UI User Interface Design Project with ionic 5, Angular Framework V9, and Angular Materials.
+# Covid-19 guide Mobile App UI User Interface Design Project with ionic, Angular Framework, and Angular Materials.
 
 ## Developed Using:
 Ionic Framework
