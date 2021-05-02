@@ -1,0 +1,143 @@
+ion-header {
+
+    ion-toolbar, ion-item {
+      background: #362170;
+      --background: #362170;
+      //--background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+      //background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+
+      //--background: #f1f5f8;
+      //background: #f1f5f8;
+      padding: 0 10px;
+    }
+  
+    ion-toolbar {
+      .bordered {
+        --border-radius: 10px;
+        //--box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #FFFFFF;
+        --box-shadow: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+      }
+    }
+  
+    ion-item {
+      h3 {
+        font-weight: 700;
+        font-size: 14px;
+      }
+  
+     /* p {
+        font-weight: 500;
+        font-size: 14px;
+      }
+      */
+  
+      ion-avatar {
+        --border-radius: 40%;
+      }
+    }
+  
+  }
+  
+  ion-content {
+    
+    background: #f1f5f8;
+    //--background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+  
+    .slides {
+      background: #362170;
+      //background: #f1f5f8;
+      //--background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+      //background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+      //padding: 4px 10px 20px 10px;
+      border-radius: 0 0 28px 28px;
+    }
+  
+    ion-card {
+      width: 100%;
+      box-shadow: none;
+      border-radius: 14px;
+     // padding: 14px;
+      //background: rgba(255,255,255,.8);
+      background: #362170;
+      /*.main {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background: #FFFFFF;
+        box-shadow:  7px 7px 20px #dbdfe2, 
+               -7px -7px 20px #ffffff;
+              
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        img {
+          width: 30px;
+        }
+  
+      
+  
+      }  */
+  
+      .files {
+          padding-top: 14px;
+      }
+  
+    }
+  
+    .container {
+
+      h4 {padding: 6px 20px;}
+      //color: #FFFFFF;
+      color: black;
+  
+      ion-item {
+        --background: rgba(255,255,255,.1);
+        background: rgba(255,255,255,.1);
+        padding: 0;
+        margin: 14px 0;
+        --border-radius: 20%;
+        //color: #FFFFFF;
+        color: black;
+        font-weight: 600;
+  
+        ion-label {
+          padding: 6px 0;
+  
+          h4 {
+            font-weight: 600;
+            font-size: 16px;
+          }
+
+          h6 {
+            //color: rgba(255,255,255,.66);
+            color: black;
+          }
+        }
+
+      }
+  
+      h2 {
+        padding-bottom: 8px;
+      }
+      
+    }
+
+    .mydiv{
+      background: #362170;
+      --background: #362170;
+      //--background: linear-gradient(90deg, rgb(45, 112, 229, 1) 0%, rgba(45,112,229,1) 35%, rgb(32, 25, 102) 100%);
+      //background: linear-gradient(90deg, rgb(45, 112, 229, 1) 0%, rgba(45,112,229,1) 35%, rgb(32, 25, 102) 100%);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    
+  }
+
+
+/*
+  <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+  <application android:networkSecurityConfig="@xml/network_security_config" />
+</edit-config>
+*/

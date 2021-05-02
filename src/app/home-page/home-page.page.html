@@ -1,0 +1,224 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+
+		<ion-buttons slot="start">
+      <ion-menu-button menu="main-menu">
+        <ion-icon name="apps" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="clear" (click)="notifyContacts()">
+				<ion-icon name="notifications" color="light"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+
+	<ion-item lines="none">
+
+		<ion-avatar slot="start">
+			<img src="https://www.freevector.com/uploads/vector/preview/30888/small_1x_END_THE_PANDEMIC.jpg">
+    </ion-avatar>
+			<ion-label color="light">
+				<p>Welcome to the</p>
+				<h3>COVID-19 Tracking App For Nigeria</h3>
+			</ion-label>
+	</ion-item>
+
+</ion-header>
+
+<ion-content>
+
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/add-contact">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="slides ion-margin-bottom">
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="ion-text-left">
+              <h6 style="color: rgba(255, 255, 255, 0.795)">Are you feeling sick?</h6>
+            </div>
+            <div class="ion-margin-top ion-text-left">
+              <p style=" color: rgba(255, 255, 255, 0.74)">
+                If you have any of the COVID-19 symptoms, kindly call or text the NCDC immediately below:
+              </p>
+            </div>
+          </ion-card-header>
+          <ion-grid class="ion-margin-bottom">
+            <ion-row class="align-items-center">
+              <ion-col size="6">
+                <ion-button color="danger" shape="round" class="ion-text-capitalize" (click)="callNCDC()">
+                  <ion-icon name="call" color="light"> </ion-icon>Call
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button color="primary" shape="round" routerLink="/home-page" class="ion-text-capitalize" (click)="sendSMS()">
+                  <ion-icon name="chatbubbles" color="light"></ion-icon> SMS
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+         <!-- <ion-card-content class="ion-text-left">
+             <ion-card-subtitle class="ion-text-right">10/50GB</ion-card-subtitle>
+          </ion-card-content>
+          -->
+        </ion-card>
+      </ion-slide>
+  </div>
+
+  <div class="container">
+    <h4>Symptoms</h4>
+      <ion-item lines="none">
+      <ion-grid>
+
+        <!--First row-->
+        <ion-row class="ion-align-items-center">
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/001/432/050/small_2x/woman-sick-with-fever-using-thermometer-fill-style-free-vector.jpg">
+            </ion-item>
+          <p style="font-size: 10px; text-align: center; font-weight: 0px">Fever</p>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/001/815/663/small_2x/boy-head-with-dry-cough-design-free-vector.jpg">
+            </ion-item>
+           <p style="font-size: 10px; text-align: center; font-weight: 0px">Cough</p>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/001/815/847/small_2x/boy-head-with-sore-throat-design-free-vector.jpg">
+            </ion-item>
+           <p style="font-size: 10px; text-align: center; font-weight: 0px">Sore Throat</p>
+          </ion-col>
+        </ion-row>
+
+        <!--Second Row-->
+        <ion-row class="ion-align-items-center">
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://th.bing.com/th/id/OIP.YdCgE_J_sMKEY01-eOmvkwHaF0?w=220&h=180&c=7&o=5&dpr=1.25&pid=1.7">
+            </ion-item>
+          <p style="font-size: 10px; text-align: center; font-weight: 0px">Shortness of Breathe</p>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://th.bing.com/th/id/OIP.KZ-nTnZBgz1V-uL1RViSmgHaEK?w=322&h=181&c=7&o=5&dpr=1.25&pid=1.7">
+            </ion-item>
+          <p style="font-size: 10px; text-align: center; font-weight: 0px">Fatigue</p>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://th.bing.com/th/id/OIP.vo6KrhpAN9sr8UGfltwc8wHaFL?w=237&h=180&c=7&o=5&dpr=1.25&pid=1.7" width="100%">
+            </ion-item>
+          <p style="font-size: 10px; text-align: center; font-weight: 0px">Vomitting</p>
+          </ion-col>
+        </ion-row>
+
+        <!--Third Row-->
+        <ion-row class="ion-align-items-center">
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://www.freevector.com/uploads/vector/preview/30841/small_1x_COUGH_INTO_ELBOW.jpg">
+            </ion-item>
+          <p style="font-size: 10px; text-align: center; font-weight: 0px">Runny nose</p>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://th.bing.com/th/id/OIP.Jnjzsnhv1AJjS0EZt0nGngHaHa?w=167&h=180&c=7&o=5&dpr=1.25&pid=1.7">
+            </ion-item>
+          <p style="font-size: 10px; text-align: center; font-weight: 0px">Body/Muscle aches</p>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item fill="clear">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/001/520/246/small_2x/cartoon-character-with-diarrhea-symptoms-free-vector.jpg">
+            </ion-item>
+           <p style="font-size: 10px; text-align: center; font-weight: 0px">Diarrhea</p>
+          </ion-col>
+        </ion-row>
+        <!--
+        <div class="container fluid">
+
+          <ion-item lines="none">
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="3">
+                  <ion-button fill="clear">
+                    <ion-icon slot="icon-only" name="film"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="7">
+                  <ion-label>
+                    <h4>Project.MP4</h4>
+                    <h6>Dropbox/Videos</p>
+                  </ion-label>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-button color="primary" fill="clear">
+                    <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        
+        </div> 
+        -->
+      </ion-grid>
+    </ion-item>
+  </div>
+
+  <div class="mydiv">
+    <ion-row>
+      <ion-col size="4">
+          <img src="assets/check.svg" width="100%" height="100%">
+      </ion-col>
+      <ion-col size="8">
+        <div class="ion-margin-top ion-text-left">
+          <p style="color:  rgba(255, 255, 255, 0.74); font-size: 10px">
+            Did you test positive for COVID-19?
+          </p>
+          <ion-button color="danger" class="ion-text-capitalize" expand="block" (click)="notifyContacts()">
+           Notify Contacts
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+<div class="mydiv">
+  <ion-row>
+    <ion-col size="4">
+        <img src="assets/check.svg" width="100%" height="100%">
+    </ion-col>
+    <ion-col size="8">
+      <h6 style="color: rgba(255, 255, 255, 0.795);">Prevention</h6>
+      <div class="ion-margin-top ion-text-left">
+        <p style="color:  rgba(255, 255, 255, 0.74); font-size: 10px">
+          Learn how to stay safe below:
+        </p>
+        <ion-button color="#362170" routerLink="/welcome" class="ion-text-capitalize" expand="block">
+          Learn More
+        </ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>
+
+<div class="mydiv">
+  <ion-row>
+    <ion-col size="12">
+        <ion-button routerLink="/statistics" class="ion-text-capitalize" expand="block">
+          View COVID Statistics
+        </ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+
+</ion-content>

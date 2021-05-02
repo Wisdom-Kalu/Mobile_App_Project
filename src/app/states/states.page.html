@@ -1,0 +1,225 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+
+		<ion-buttons slot="start">
+        <ion-back-button color="light" defaultHref="/home-page" icon="chevron-back"></ion-back-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="clear">
+				<ion-icon name="notifications" color="light"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+
+	<ion-item lines="none">
+			<ion-label color="light">
+        <h3>Check out the spread of the COVID-19 virus wherever you <br> live in Nigeria. 
+          Click the button below and select your <br> state from the dropdown to see the current spread of <br> the virus in real time</h3>
+			</ion-label>
+	</ion-item>
+
+</ion-header>
+
+<ion-content>
+  
+  <div>
+    <ion-slide>
+      <ion-card>
+        <ion-grid>
+          <ion-row class="align-items-center">
+            <ion-col size="6">
+              <ion-button color="light" fill="clear" shape="round" routerLink="/statistics" class="ion-text-capitalize">
+                Nigeria
+              </ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button shape="round" color="light" fill="solid" class="ion-text-capitalize">
+                <form class="form-group">
+                  <div>
+                    <ion-select name="ourstate" id="ourstate" (ionChange)="getStatesData()">
+                      <ion-select-option *ngFor="let results of result" value="{{results}}">{{results}}</ion-select-option>
+                    </ion-select>
+                  </div>
+                </form>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-slide>
+  </div>
+
+  <!--FIRST ROW-->
+  <div>
+    <ion-slide>
+      <ion-card>
+        <ion-grid>
+          <ion-row class="align-items-center">
+            <ion-col size="6">
+              <div class="stats">
+                <p>State</p>
+                <h3>{{staty}}</h3>
+              </div>
+            </ion-col>
+            <ion-col size="6">
+              <div class="stats2">
+                <p>Deaths</p>
+                <h3>{{onwu}}</h3>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-slide>
+  </div>
+  
+  <!--FIRST ROW-->
+  <div class="ion-margin-bottom">
+    <ion-slide>
+      <ion-card>
+        <ion-grid class="ion-margin-bottom">
+          <ion-row class="align-items-center">
+            <ion-col size="4">
+              <div class="stats3">
+                <p>Recovery</p>
+                <h3>{{freed}}</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <div class="stats4">
+                <p>Active</p>
+                <h3>{{total}}</h3>
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <div class="stats5">
+                <p>Confirmed</p>
+                <h3>{{active}}</h3>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-slide>
+  </div>
+  
+
+  <div class="container" height="inherit">
+      <div class="form ion-text-center" style="font-size: small;">
+        <ion-item>
+          
+        </ion-item>
+      </div> 
+    </div>
+  
+</ion-content>
+
+
+
+
+<!--
+<ion-app>
+
+<ion-header>
+  <ion-toolbar>
+		<ion-buttons slot="start">
+        <ion-back-button color="light" defaultHref="/home-page" icon="chevron-back"></ion-back-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="clear">
+				<ion-icon name="notifications" color="light"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+
+	<ion-item lines="none">
+			<ion-label color="light">
+				<h2>Check out the spread of the COVID-19 virus <br> wherever you live in Nigeria in real time below</h2>
+			</ion-label>
+	</ion-item>
+
+</ion-header>
+
+
+
+  <ion-content fullscreen>
+
+    <div>
+      <ion-slide>
+        <ion-card>
+          <ion-grid>
+            <ion-row class="align-items-center">
+              <ion-col size="6">
+                <ion-button color="light" shape="round" routerLink="/statistics" class="ion-text-capitalize">
+                  Nigeria
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button shape="round" color="light" fill="solid" class="ion-text-capitalize">
+                  <form>
+                    <div class="form-group">
+                      <ion-select>
+                        <ion-select-option *ngFor="let results of result" value="{{results}}">{{results}}</ion-select-option>
+                      </ion-select>
+                    </div>
+                  </form>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-slide>
+    </div>
+
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <div>Abia State</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div style="background: rgb(212, 160, 62); color: white; font-weight: 400px;">
+               Confirmed
+              <p>12000</p>
+            </div>
+            
+          </ion-col>
+          <ion-col>
+            <div style="background: rgb(69, 143, 204); color: white; font-weight: 400px;">
+              Active
+              <p>12000</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div style="background: rgb(168, 129, 56); color: white; font-weight: 400px;">
+              Tests
+              <p>12000</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div style="background: rgb(201, 44, 44); color: white; font-weight: 400px;">
+              Deaths
+              <p>12000</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <div style=" background: rgb(41, 194, 62); color: white; font-weight: 400px;">
+              Recoveries: 1200
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  
+  </ion-content>
+</ion-app>
+
+-->

@@ -1,0 +1,45 @@
+  
+ion-content {
+  //--background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+  --background: #362170;
+}
+
+  
+.wave-container {
+  position: relative;
+  color: #FFF;
+  text-align: center;
+  overflow: hidden;
+
+  
+  
+  img {
+    margin-bottom: 2rem;
+  }
+
+}
+
+.wave-container > svg {
+  display: block;
+}
+
+
+h1 {
+  font-size: 4rem;
+  margin: 2rem auto;
+}
+
+ion-footer {
+  ion-toolbar {
+    --background: rgba(0,0,0,0);
+    ion-title {
+      font-size: 12px;
+    }
+  }
+}
+
+
+@-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
+.wave-container{
+    -webkit-animation:scale-in-center 2s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center 2s cubic-bezier(.25,.46,.45,.94) both;
+}

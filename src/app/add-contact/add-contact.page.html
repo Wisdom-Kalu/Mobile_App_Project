@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+		<ion-buttons slot="start">
+      <ion-menu-button menu="main-menu">
+        <ion-icon name="apps" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+
+		<ion-buttons slot="end" class="ion-margin-bottom">
+			<ion-button fill="clear" (click)="notifyContacts()">
+        <ion-icon name="notifications" color="light"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <img src="assets/doctor.svg" class="img1">
+  </div>
+  <div class="container">
+    <div class="form ion-text-center">
+      <h2> Add Contact Tracing List </h2>
+      <form id="add-contact-form" name="add-contact-form" #addData="ngForm" (ngSubmit)="checkInput(addData.value);">
+          <ion-item lines='none'>
+            <ion-input type="text" name="fullName" placeholder='Name' ngModel clearInput required></ion-input>
+          </ion-item>
+      
+          <ion-item lines='none'>
+            <ion-input type="text" name="phoneNumber" placeholder='Phone Number' ngModel clearInput required></ion-input>
+          </ion-item>
+          <ion-button expand='block' type="submit" name="submit">Add</ion-button>
+      </form>
+    </div>
+  </div>
+
+  </ion-content>
+
